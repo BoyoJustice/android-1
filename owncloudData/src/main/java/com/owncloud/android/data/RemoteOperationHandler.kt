@@ -138,15 +138,6 @@ private fun <T> handleRemoteOperationResult(
         RemoteOperationResult.ResultCode.SPECIFIC_SERVICE_UNAVAILABLE -> throw SpecificServiceUnavailableException()
         RemoteOperationResult.ResultCode.SPECIFIC_UNSUPPORTED_MEDIA_TYPE -> throw SpecificUnsupportedMediaTypeException()
         RemoteOperationResult.ResultCode.SPECIFIC_METHOD_NOT_ALLOWED -> throw SpecificMethodNotAllowedException()
-//        else -> {
-//            when (remoteOperation) {
-//                is GetRemoteShareesOperation -> throw GetShareesGenericException()
-//                is GetRemoteSharesForFileOperation -> throw GetSharesGenericException()
-//                is CreateRemoteShareOperation -> throw CreateShareGenericException()
-//                is UpdateRemoteShareOperation -> throw UpdateShareGenericException()
-//                is RemoveRemoteShareOperation -> throw RemoveShareGenericException()
-//            }
-//        }
         else -> throw Exception()
     }
 }
